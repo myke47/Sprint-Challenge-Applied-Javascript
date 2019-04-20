@@ -4,7 +4,7 @@ class TabLink {
     this.tabElement = tabElement;
     
     // Get the `data-tab` value from this.tabElement and store it here
-    this.dataTab = this.tabElement.dataset;
+    this.tabData = this.tabElement.dataset;
 
     this.tabData = document.querySelector(`.tabElement[data-tab='${this.dataset}]`); 
     
@@ -12,28 +12,30 @@ class TabLink {
     
     // Check to see if this.tabData is equal to 'all'
     if(this.tabData === 'all'){
-      this.cards = ;
+      this.cards = ['cards'];
     } else {
-      else if (this.tabData !='all'){
-        this.cards = this.tabData;
+      else if (this.tabData != 'all'){
+      this.cards = ['this.tabData'];
       }
     }
 
      // Map over the newly converted NodeList we just created in our if statement above. Convert each this.cards element into a new instance of the TabCard class. Pass in a card object to the TabCard class. 
-    // this.cards = Array.from(this.cards).map();
+    this.cards = Array.from(this.cards).map();
 
     // Add a click event that invokes this.selectTab
-    // this.tabElement.addEventListener();
+    this.tabElement.addEventListener('click', () =>{ 
+      this.selectTab()
+    })
   }
 
   selectTab(){
 
     // Select all elements with the .tab class on them
-    const tabs = document.querySelectorAll('tabs .tab');
+    const tabs = document.querySelectorAll('tab');
     
     // Iterate through the NodeList removing the .active-tab class from each element
     tabs.forEach(tab => {
-      tabs.tabElement.classList.remove('tabs .active-tab')
+      tabs.tabElement.classList.remove('tab .active-tab')
     })
 
     // Select all of the elements with the .card class on them
