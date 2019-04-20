@@ -32,13 +32,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+This is the 'Document Object Model' which acts as the interface or bridge from a live webpage in a browser to the html elements within the 'Tree'.
+
 2. What is an event?
+
+Any and every interaction a user has with a website. 
 
 3. What is an event listener?
 
+Method applied to a selected element that will accept two arguments. The event to listen for, and the callback ro execute when the event is triggered. 
+
 4. Why would we convert a NodeList into an Array?
 
+You would need to convert a Nodelist to an Array in order to gain access to any other array method like .reduce or .map since it only has addess to .forEach initially. 
+
 5. What is a component?
+
+A component combines HTML, CSS, and JavaScript as one piece of code in order to allow the developer the reuse that combination of elements again through a project or website. 
 
 ### Git Set up
 
